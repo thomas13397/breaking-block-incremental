@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Incremental Game</title>
+    <title>Block Breaker Incremental</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="game-container">
-        <!-- Resource Display -->
-        <div class="resource-display">
-            Points: <span id="currency">0</span>
+    <div class="game-container">
+        <h2>Block Breaker</h2>
+        <div id="money">Money: $0</div>
+        <div class="blocks-grid" id="blocks-container"></div>
+    </div>
+
+    <div class="stats">
+        <div class="upgrade">
+            <h3>Pickaxe Stats</h3>
+            <div id="efficiency">Efficiency: 1</div>
+            <div id="fortune">Fortune: 1x</div>
+            <div id="luck">Luck: 0%</div>
+            <div id="power">Critical Power: 2x</div>
         </div>
 
-        <!-- Main Click Button -->
-        <button id="main-button">Click Me!</button>
-
-        <!-- Upgrades Section -->
-        <div id="upgrades">
+        <div class="upgrade">
             <h3>Upgrades</h3>
-            <div class="upgrade">
-                <div>
-                    <h4>Auto-Clicker</h4>
-                    <p>Produces <span id="auto-rate">1</span>/second</p>
-                    <p>Owned: <span id="auto-count">0</span></p>
-                </div>
-                <button class="buy-btn" data-cost="10">Buy (10 points)</button>
-            </div>
+            <button onclick="buyUpgrade('efficiency')" id="efficiency-btn">
+                Efficiency ($100)
+            </button>
+            <button onclick="buyUpgrade('fortune')" id="fortune-btn">
+                Fortune ($200)
+            </button>
+            <button onclick="buyUpgrade('luck')" id="luck-btn">
+                Luck ($300)
+            </button>
+            <button onclick="buyUpgrade('power')" id="power-btn">
+                Power ($400)
+            </button>
         </div>
     </div>
 
-    <!-- JavaScript File Link -->
-    <script src="script.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
