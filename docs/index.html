@@ -10,7 +10,13 @@
     <div class="game-container">
         <h2>Block Breaker</h2>
         <div id="money">Money: $0</div>
-        <div class="blocks-grid" id="blocks-container"></div>
+
+        <!-- Block Carousel -->
+        <div class="carousel">
+            <button class="carousel-arrow left" onclick="moveCarousel(-1)">&#10094;</button>
+            <div class="blocks-container" id="blocks-container"></div>
+            <button class="carousel-arrow right" onclick="moveCarousel(1)">&#10095;</button>
+        </div>
     </div>
 
     <div class="stats">
