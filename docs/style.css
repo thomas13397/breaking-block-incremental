@@ -1,0 +1,64 @@
+/* Base Styling */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f0f0f0;
+}
+
+/* Game Container */
+#game-container {
+    border: 2px solid #2c3e50;
+    border-radius: 10px;
+    padding: 20px;
+    background: white;
+}
+
+/* Resource Display */
+.resource-display {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Main Button */
+#main-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+#main-button:active {
+    transform: scale(0.95);
+}
+
+/* Upgrades Section */
+.upgrade {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    background: #ecf0f1;
+    border-radius: 5px;
+}
+
+.buy-btn {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buy-btn:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+}
