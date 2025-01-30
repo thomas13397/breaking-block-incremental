@@ -55,11 +55,18 @@ function mineBlock(block) {
     block.hp -= damage;
     
     if (block.hp <= 0) {
+        // Add money based on block value and fortune
         money += block.value * pickaxe.fortune;
-        block.hp = blockTypes.find(b => b.type === block.type).hp; // Reset HP
+        
+        // Reset the block's HP to its original value
+        const originalBlock = blockTypes.find(b => b.type === block.type);
+        block.hp = originalBlock.hp;
+        
+        // Update the display
         updateDisplay();
     }
     
+    // Update the block's display
     updateBlockDisplay(block);
 }
 
